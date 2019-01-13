@@ -105,7 +105,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs, data_dir, wr
 
                 # statistics
                 running_loss += loss.item() * inputs.size(0)
-                corrects = torch.sum(preds == labels.data)
+                corrects = torch.sum(preds == labels.data).float()
                 running_corrects += corrects
                 niter = epoch * len(dataloaders[phase]) + batch_idx
                 writer.add_scalar(f'{phase}/Loss', loss.item(), niter)

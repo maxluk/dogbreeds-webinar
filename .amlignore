@@ -6,6 +6,7 @@ outputs
 azureml-setup
 docs
 breeds-10
+breeds
 model
 20news.pkl
 logs
