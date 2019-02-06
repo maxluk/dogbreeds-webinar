@@ -150,7 +150,7 @@ def fine_tune_model(num_epochs, data_dir, learning_rate, momentum, writer):
 
     model_ft = models.resnet18(pretrained=True)
     num_ftrs = model_ft.fc.in_features
-    model_ft.fc = nn.Linear(num_ftrs, num_classes)  # 40 classes to predict
+    model_ft.fc = nn.Linear(num_ftrs, num_classes)  # 10/120 classes to predict
 
     if torch.cuda.is_available():
         device = torch.device('cuda:0')
